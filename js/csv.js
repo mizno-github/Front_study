@@ -1,6 +1,8 @@
 // 動作未検証
 // urlからcsvを取得する
-const str = function fetchCSV(url) {
+// @param string url
+// @return string
+function fetchCSV(url) {
   var req = new XMLHttpRequest();
   req.open("get", url, true);
   req.send(null);
@@ -12,6 +14,8 @@ const str = function fetchCSV(url) {
 }
 
 // csvを２次元に変更する
+// @param string str
+// @return array
 function convertCSVtoArray(str){
   var result = [];
   var tmp = str.split("\n");
